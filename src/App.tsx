@@ -42,8 +42,8 @@ function App() {
     }, [passwordInput]);
     return (
         <>
-            <div className={''}>
-                <div className="form-group">
+            <div className={'form-group'}>
+                <div className="">
                     <label htmlFor="password">Password</label>
                     <input
                         type={show ? 'text' : 'password'}
@@ -54,9 +54,6 @@ function App() {
                     />
                 </div>
                 {error != null && <p style={{color: 'red'}}>{error}</p>}
-                <button type="submit" className="btn btn-primary">
-                    Submit
-                </button>
                 <button onClick={() => setShow(!show)}>Toggle show</button>
             </div>
         </>
