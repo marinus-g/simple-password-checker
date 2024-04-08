@@ -43,22 +43,20 @@ function App() {
     return (
         <>
             <div className={''}>
-                <form>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type={show ? 'text' : 'password'}
-                            className="form-control"
-                            id="password"
-                            value={passwordInput}
-                            onChange={(e) => setPasswordInput(e.target.value)}
-                        />
-                    </div>
-                    {error != null && <p style={{color: 'red'}}>{error}</p>}
-                    <button type="submit" className="btn btn-primary">
-                        Submit
-                    </button>
-                </form>
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type={show ? 'text' : 'password'}
+                        className="form-control"
+                        id="password"
+                        value={passwordInput}
+                        onChange={(e) => setPasswordInput(e.target.value)}
+                    />
+                </div>
+                {error != null && <p style={{color: 'red'}}>{error}</p>}
+                <button type="submit" className="btn btn-primary">
+                    Submit
+                </button>
                 <button onClick={() => setShow(!show)}>Toggle show</button>
             </div>
         </>
