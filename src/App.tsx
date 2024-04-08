@@ -22,7 +22,7 @@ function App() {
             } else if (!password.match(/[a-z]/)) {
                 return 'Password muss mindestens einen Kleinbuchstaben enthalten'
             } else if (!password.match(/[A-Z]/)) {
-                console.log('Password muss mindestens einen Großbuchstaben enthalten')
+                return 'Password muss mindestens einen Großbuchstaben enthalten';
             } else if (!password.match(/[^a-zA-Z0-9]/)) {
                 return 'Password muss mindestens ein Sonderzeichen enthalten'
             }
